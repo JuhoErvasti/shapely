@@ -267,8 +267,6 @@ def coverage_clean(
         merge_strategy
     ):
         raise ValueError(f"not a valid merge strategy value: {merge_strategy}.")
-    if isinstance(merge_strategy, CoverageCleanMergeStrategy):
-        merge_strategy = merge_strategy.value
 
     geometries = np.asarray(geometry)
     # we always consider the full array as a single coverage -> ravel the input
